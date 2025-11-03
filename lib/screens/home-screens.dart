@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,10 +27,25 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Вы нажали кнопку столько раз:'),
+            const Text(
+              'Вы нажали кнопку столько раз:',
+              style: TextStyle(fontSize: 18),
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailsScreen(),
+                  ),
+                );
+              },
+              child: const Text('Перейти на экран деталей'),
             ),
           ],
         ),
