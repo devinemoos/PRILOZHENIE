@@ -20,17 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Моё приложение'),
-      ),
+      appBar: AppBar(title: const Text('Главный экран')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'Вы нажали кнопку столько раз:',
-              style: TextStyle(fontSize: 18),
-            ),
+            const Text('Вы нажали кнопку столько раз:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,

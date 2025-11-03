@@ -6,19 +6,18 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Детали')),
+      appBar: AppBar(title: const Text('Экран деталей')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Это второй экран приложения',
+              'Это второй экран приложения!',
               style: TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Возврат на главный экран
                 Navigator.pop(context);
               },
               child: const Text('Назад'),
@@ -29,3 +28,4 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
+
